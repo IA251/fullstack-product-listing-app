@@ -91,7 +91,7 @@ The frontend code is in `frontend/app.js`, and it expects the backend API to be 
 
 1. Open a terminal and run:
    ```powershell
-   gh repo clone IA251/fullstack-product-listing-app
+   git clone IA251/fullstack-product-listing-app
    ```
 2. Enter the cloned folder:
    ```powershell
