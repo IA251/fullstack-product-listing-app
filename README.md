@@ -87,21 +87,28 @@ The frontend code is in `frontend/app.js`, and it expects the backend API to be 
 
 ## Installation and Run
 
+### Clone the repository
+
+1. Open a terminal and run:
+   ```powershell
+   gh repo clone IA251/fullstack-product-listing-app
+   ```
+2. Enter the cloned folder:
+   ```powershell
+   cd fullstack-product-listing-app
+   ```
+
 ### Using Docker Compose
 
-1. Open a terminal in the project root:
-   ```powershell
-   cd C:\Users\user\Desktop\seperia_task
-   ```
-2. Build the containers:
+1. Build the containers:
    ```powershell
    docker compose build --no-cache
    ```
-3. Start the application:
+2. Start the application:
    ```powershell
    docker compose up
    ```
-4. Open the frontend in the browser:
+3. Open the frontend in the browser:
    - `http://localhost:5500`
 
 The backend API will be available at:
