@@ -1,0 +1,302 @@
+/* =========================
+   BASE
+========================= */
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+.app {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* =========================
+   HEADER (LIGHT GLASS CARD)
+========================= */
+
+.topbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 28px 20px;
+    margin-bottom: 20px;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #111827;
+}
+
+.topbar p {
+    margin: 6px 0 18px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 420px;
+}
+
+.search input {
+    flex: 1;
+    padding: 10px 14px;
+
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+
+    background: #ffffff;
+    color: #111827;
+
+    outline: none;
+    transition: 0.2s;
+}
+
+.search input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+.search button {
+    padding: 10px 14px;
+
+    border-radius: 12px;
+    border: none;
+
+    background: #3b82f6;
+    color: white;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.search button:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+th {
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    background: #f9fafb;
+    padding: 14px;
+    color: #6b7280;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13px;
+}
+
+/* =========================
+   TEXT HELPERS
+========================= */
+
+.desc {
+    max-width: 260px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.thumb {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+.btn {
+    background: #10b981;
+    color: white;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    padding: 20px;
+    background: #f9fafb;
+    animation: open 0.2s ease-out;
+    border-top: 1px solid #e5e7eb;
+}
+
+.img-box {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    margin: 8px;
+    position: relative;
+
+    border-radius: 14px;
+    overflow: hidden;
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================
+   SPINNER
+========================= */
+
+.spinner {
+    width: 22px;
+    height: 22px;
+    border: 3px solid #e5e7eb;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+
+    margin: 20px auto;
+}
+
+.spinner.small {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* =========================
+   EMPTY / ERROR
+========================= */
+
+.empty-state {
+    text-align: center;
+    padding: 60px;
+    color: #6b7280;
+}
+
+.error {
+    color: #ef4444;
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pagination button {
+    margin: 0 5px;
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid #e5e7eb;
+}
+
+#pagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+#pagination span {
+    margin: 0 10px;
+    color: #6b7280;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.gallery-row {
+    animation: open 0.2s ease-out;
+    transform-origin: top;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes open {
+    from {
+        opacity: 0;
+        transform: scaleY(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}

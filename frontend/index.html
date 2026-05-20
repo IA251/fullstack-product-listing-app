@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Top header container that holds title and search bar -->
+    <header class="topbar">
+
+        <!-- Main title and subtitle description -->
+        <div>
+            <h1>🛍 Products</h1>
+            <p>Manage and explore your catalog</p>
+        </div>
+
+        <!-- Search input and button container -->
+        <div class="search">
+
+            <!-- Input field used to filter products by text -->
+            <input id="searchInput"
+                   placeholder="Search products..."
+                   onkeydown="if(event.key==='Enter') UI.search()" />
+
+            <!-- Button that triggers search function -->
+            <button onclick="UI.search()">Search</button>
+
+        </div>
+
+    </header>
+
+    <!-- Main container where table is rendered dynamically -->
+    <main>
+        <div id="table-container"></div>
+        <div id="pagination"></div>
+    </main>
+
+</div>
+
+<!-- Main javascript logic file -->
+<script src="app.js"></script>
+
+</body>
+</html>
